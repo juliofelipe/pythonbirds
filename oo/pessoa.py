@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2
     def __init__(self, *filhos, nome=None, idade=43):
         self.idade = idade
         self.nome = nome
@@ -26,4 +27,18 @@ class Pessoa:
 # >>> del julio.filhos
 # >>> print(julio.__dict__)
 # {'idade': 43, 'nome': 'Julio', 'sobrenome': 'Felipe'}
+# >>> from oo.pessoa import Pessoa
+# >>> Pessoa.olhos
+# 2
+# >>> julio = Pessoa(None, nome='Julio')
+# >>> julio.__dict__
+# {'idade': 43, 'nome': 'Julio', 'filhos': [None]}
+# >>> julio.olhos
+# 2
+# >>> julio.olhos = 1
+# >>> julio.__dict__
+# {'idade': 43, 'nome': 'Julio', 'filhos': [None], 'olhos': 1}
+# >>> del julio.olhos
+# >>> julio.__dict__
+# {'idade': 43, 'nome': 'Julio', 'filhos': [None]}
 # >>>
